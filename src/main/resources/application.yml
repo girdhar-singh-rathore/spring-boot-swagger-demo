@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: spring-boot-swagger
+  jpa:
+    show-sql: true
+    
+server:
+  port: 8080
+  
+management:
+  security:
+    enabled: false
+    
+logging:
+  level:
+    ROOT: WARN
+    org:
+      springframework: INFO
+      hibernet: DEBUG
+    com:
+      example: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file: application.log
+      
