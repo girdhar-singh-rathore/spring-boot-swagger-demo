@@ -22,11 +22,11 @@ public class SwaggerConfig {
 	public static final ApiInfo API_INFO = new ApiInfo("Swagger Demo", "Spring Boot Swagger example", "1.0",
 			"All right reserved", CONTECT, "1.0", "licenseUrl");
 
-	private static final Set<String> CONSUMER_AND_PRODUCE = new HashSet<>(Arrays.asList("application/json"));
+	private static final Set<String> CONSUME_AND_PRODUCE = new HashSet<>(Arrays.asList("application/json"));
 
 	@Bean
 	public Docket api() {
-		return new Docket(DocumentationType.SWAGGER_2).apiInfo(API_INFO).consumes(CONSUMER_AND_PRODUCE)
-				.produces(CONSUMER_AND_PRODUCE);
+		return new Docket(DocumentationType.SWAGGER_2).apiInfo(API_INFO).consumes(CONSUME_AND_PRODUCE)
+				.produces(CONSUME_AND_PRODUCE);
 	}
 }
